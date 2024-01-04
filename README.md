@@ -21,3 +21,8 @@ HW#4
 4) 랜덤 번호 생성(0~10사이, 중복 X)
 
 HW#5
+1) 이름(문자열) 5개를 입력받아 names에 저장 후 내용 차례대로 출력. 이름(문자열) 1개를 입력 받아 search에 저장. names에 search와 같은 이름이 있으면 몇번째 이름인지 출력, 없으면 "없습니다" 출력. 이러한 검색을 "quit"이 입력될 때까지 반복.
+2) 이름(문자열), 나이(정수), 키(실수)를 입력받아서 name, age, height에 저장. strcpy()와 strcat()을 사용하여 result에 다음 문자열을 저장 "[name] is [age] years old and his/her height is [height]" ([]는 각 변수에 저장된 값을 의미) 최종적으로 result의 문자열 내용 출력
+3) 2번과 동일한 기능을 수행하는 프로그램을 sprintf()를 사용하여 작성
+
+HW#6
