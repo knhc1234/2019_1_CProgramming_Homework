@@ -162,6 +162,45 @@ HW#9
 단, 우리나 하데스 모두, 이미 한 번 공격한 위치는 다시 공격할 수 없다.
 
 
-
 참고: 하데스의 경우, 화면에 보여주기 위한 정보와 함선 배치 정보를
 각각 독립된 배열에 저장하면 구현이 더 편할 것임
+
+HW#10
+1) Pointer를 이용하여 함수(function)을 정비하라.
+1: [원래 함수: row와 column을 별도의 함수에서 얻음]
+int get_row(const char coordinate[10]);
+int get_column(const char coordinate[10]);
+-->
+[개선된 함수: pointer를 사용하여 하나의 함수에서 얻음]
+int get_coordinate(const char coordinate[10], int* row, int* column);
+
+2: [원래 함수: row, column, direction을 별도의 함수에서 얻음]
+int get_random_row(void);
+int get_random_column(void);
+char get_random_direction(void);
+-->
+[개선된 함수: pointer를 사용하여 하나의 함수에서 얻음]
+int get_random_coordinate(const char coordinate[10], int* row, int* column, char* direction);
+
+2) 파일(file)을 사용하여 역사를 기록하라.
+
+
+파일에 현재까지 행성 포세이돈의 승수와 패수를 기록하고,
+프로그램이 실행될 때 처음에 이 정보를 화면에 출력하라.
+
+
+예)
+====================================
+사령관님 환영합니다.
+====================================
+현재까지 사령관님의 대 행성 하데스 전쟁 전적은
+11승 0패 입니다.
+
+3) 매번 지기만 하는 행성 하데스가 불쌍하다면, 좀 도와주자.
+
+
+행성 하데스가 공격 좌표를 random하게 정하는 것이 아니라
+좀 더 smart하게 정하도록 하는 code를 추가해보자.
+
+
+- 어떤 방법을 사용하던 자유
