@@ -167,6 +167,7 @@ HW#9
 
 HW#10
 1) Pointer를 이용하여 함수(function)을 정비하라.
+   
 1: [원래 함수: row와 column을 별도의 함수에서 얻음]
 int get_row(const char coordinate[10]);
 int get_column(const char coordinate[10]);
