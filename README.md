@@ -78,3 +78,59 @@ HW#7
 (rand()함수를 사용하여, 행성 하데스에 함선을 랜덤하게 배치하고 그 결과를 출력하면 됨.
 단, 함선을 배치할때 행성 포세이돈의 규칙을 똑같이 따라야 함.)
 
+HW#8
+1) 다음의 함수(function)을 작성하고, 이를 사용하여 숙제 7에서 했던 코드를 다시 작성하라.
+
+
+void display_ocean(const char ocean[9][9])
+ocean의 내용을 화면에 출력
+
+
+int check_input(const char coordinate[10], char direction)
+입력받은 좌표값(coordinate)과 방향(direction)이 올바른 값인지 체크
+만약 올바른 값이면 1 (true)를 return하고, 올바르지 않은 값이면 0 (false)를 return
+
+
+int get_row(const char coordinate[10])
+입력받은 좌표값(coordinate)에서 행 값(0부터 8사이의 값)을 return
+
+
+int get_column(const char coordinate[10])
+입력받은 좌표값(coordinate)에서 열 값(0부터 8사이의 값)을 return
+
+
+int check_availability(const char ocean[9][9], int row, int column, char direction, char shiptype)
+ocean에 shipetype('C', 'B', 'F', 'S' 중 하나)의 함선을 row, column, direction에 배치 가능한지 체크
+만약 배치 가능하면 1 (true)를 return하고, 배치 가능하지 않으면 0 (false)를 return
+
+
+void deploy_ship(char ocean[9][9], int row, int column, char direction, char shiptype)
+ocean에 shipetype('C', 'B', 'F', 'S' 중 하나)의 함선을 row, column, direction에 배치
+return값은 따로 없지만, ocean이 배열이기 때문에 함수 안에서 수정하면 그 결과가 반영됨
+
+
+2) 다행히 Hades도 똑같은 문제 때문에 사령부가 혼란에 빠졌다.
+이왕 일을 하는김에 Hades도 도와주자.
+
+Hades를 위해서는 다음의 함수를 추가로 작성해서 코드에서 활용하라.
+
+
+int get_random_row(void)
+좌표값중 row 좌표값(0부터 8사이의 값)을 랜덤하게 생성해서 return
+
+
+int get_random_column(void)
+좌표값중 column 좌표값(0부터 8사이의 값)을 랜덤하게 생성해서 return
+
+
+char get_random_direction(void)
+방향('N', 'S', 'E', 'W' 중 하나)을 랜덤하게 생성해서 return
+
+
+3) 숙제 7의 solution은 설명의 편의를 위해서 Poseidon과 Hades 각각에 대해서 독립적인 코드로 ocean을 생성하도록 되어 있다.
+
+그러나, 최종적으로는 Poseidon과 Hades가 하나의 소스코드로 합쳐져야 한다. 
+
+만약 자신의 코드가 Poseidon과 Hades 각각에 대해서 별도의 c 파일로 만들어져 있다면,
+
+하나의 c 파일로 코드로 합치고, 프로그램의 최종결과로 Poseidon과 Hades의 함선 배치를 차례로 출력하도록 하라.
