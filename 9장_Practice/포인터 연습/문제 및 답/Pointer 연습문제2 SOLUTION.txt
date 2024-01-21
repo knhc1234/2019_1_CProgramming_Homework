@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void main() {
+
+	int a[10];
+	int *pa;
+	int sum;
+
+	int i;
+
+	for (i = 0; i < 10; i++)
+		a[i] = i + 1;
+
+	pa = a;
+	sum = 0;
+
+	for (i = 0; i < 10; i++)
+		sum += *(pa + i);
+	   
+	printf("гу: %d", sum);
+	
+	getch();
+
+}

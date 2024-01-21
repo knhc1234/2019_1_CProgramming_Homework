@@ -1,0 +1,40 @@
+#include <stdio.h>
+#define SIZE 5
+
+void array_copy(int *A, int *B, int size);
+
+void main()
+
+{
+
+	int a[SIZE] = { 5, 19, 27, 21, 34 };
+	int b[SIZE];
+
+	int j;
+
+	array_copy(&a, &b, SIZE);
+
+	printf("A배열의 값\n");
+
+	for (j = 0; j < SIZE; j++) {
+		printf("%3d", a[j]);
+	}
+
+	printf("\nB배열의 값\n");
+
+	for (j = 0; j < SIZE; j++) {
+		printf("%3d", a[j]);
+	}
+
+	getch();
+
+}
+
+void array_copy(int *A, int *B, int size) {
+
+	int i;
+
+	for (i = 0; i < size; i++)
+		*(B+i) = *(A+i);
+
+}

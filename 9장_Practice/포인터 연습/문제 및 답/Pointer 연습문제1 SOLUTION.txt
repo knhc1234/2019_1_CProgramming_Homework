@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void main()
+
+{
+
+	int a, b; 
+	int *pa, *pb;
+
+	printf("a¿Í b°ª ÀÔ·Â : ");
+	scanf("%d %d", &a, &b);
+
+	pa = &a;
+	pb = &b;
+
+	printf("ÇÕ: %d   °ö: %d   Â÷: %d    ³ª´°¼À: %d", *pa + *pb, *pa * *pb, *pa - *pb, *pa / *pb);
+	
+	getch();
+
+}

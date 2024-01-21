@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+void main() {
+
+	char a[100];
+	char b[100];
+	char c[100];
+
+	char* strptr1;
+	char* strptr2;
+
+	printf("a의 값 입력: ");
+	gets(a);
+
+	printf("b의 값 입력: ");
+	gets(b);
+
+
+	strptr1 = a;
+	strptr2 = c;
+
+	while (*strptr1) {
+		*strptr2 = *strptr1;
+		strptr1++;
+		strptr2++;
+	}
+
+	strptr1 = b;
+
+	while (*strptr1) {
+		*strptr2 = *strptr1;
+		strptr1++;
+		strptr2++;
+	}
+
+	*strptr2 = '\0';
+
+	printf("a: %s \n", a);
+	printf("b: %s \n", b);
+	printf("c: %s \n", c);
+
+	getch();
+
+}
